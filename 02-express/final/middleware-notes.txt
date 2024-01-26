@@ -1,0 +1,33 @@
+/*
+Middleware
+
+any code which runs (on the server between getting 
+    a request and sending a response)
+
+    Purpose:
+    Logger middleware to log details of every request
+    Authenticate check middleware for protected routes
+    Middleware to parse JSON data from requests
+    Return 404 pages
+
+
+Example
+    app.use(callback);
+    app.use(callback);
+    app.use(callback);
+    this also includes app.get('/', func);
+
+the difference between the use method and get method is that
+use method run for every type of request for all routes
+
+the order of middleware code matters: if you were to do
+    app.use(callback)
+    app.get('/',callback)
+    app.use(func)
+All the middleware functions will be executed, but the order determines when they are called during the request-response cycle. 
+
+In this example, app.use(callback) will be executed for all routes, app.get('/', callback)
+ specifically for the root route, and app.use(func) for all routes as well.
+If there are conflicting middleware functions or if one middleware terminates the request-response cycle (e.g., by sending a response), subsequent middleware might not be executed. This is more about how each middleware is implemented rather than a strict rule about the order.
+
+*/
