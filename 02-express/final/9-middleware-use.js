@@ -19,7 +19,7 @@ let port = 7770;
 YES you can by using .use()
  */
 
-app.use([logger, authorize]); //middleware functions will be exevcuted in their order
+app.use([logger, authorize]); //middleware functions will be executed in their order
 
 /*
 app.use('/api', logger);
