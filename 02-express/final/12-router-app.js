@@ -4,8 +4,8 @@ const app = express();
 const port = 7770;
 
 //Import routers
-const people = require('./routes/people.js');
-const login = require('./routes/auth.js');
+const people = require('../routes/people.js');
+const login = require('../routes/auth.js');
 
 // simple app that has a form that has a inputbox for name
 app.use(express.static('./methods-public'));
